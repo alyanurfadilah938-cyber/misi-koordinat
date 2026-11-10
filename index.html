@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misi Koordinat - Kuis Matematika</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Misi Koordinat</h1>
+        <p>Kuis Interaktif Transformasi Geometri</p>
+    </header>
+
+    <main class="container">
+
+        <section id="halaman-awal">
+            <h2>Selamat Datang!</h2>
+            <p>Uji kemampuanmu dalam memahami transformasi geometri.</p>
+            <button onclick="mulaiKuis()">Mulai Kuis</button>
+        </section>
+
+        <section id="halaman-kuis" class="hidden">
+            <div class="informasi">
+                <span id="nomor-soal"></span>
+                <span id="skor-sementara">Skor: 0</span>
+            </div>
+
+            <div class="progress">
+                <div id="progress-bar"></div>
+            </div>
+
+            <h2 id="pertanyaan"></h2>
+            <div id="daftar-pilihan"></div>
+
+            <p id="pembahasan"></p>
+
+            <button id="tombol-lanjut"
+                onclick="soalBerikutnya()" disabled>
+                Soal Berikutnya
+            </button>
+        </section>
+
+        <section id="halaman-hasil" class="hidden">
+            <h2>Kuis Selesai!</h2>
+            <p id="hasil-skor"></p>
+            <button onclick="ulangKuis()">Ulangi Kuis</button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

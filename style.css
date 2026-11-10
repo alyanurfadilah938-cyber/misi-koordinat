@@ -1,0 +1,209 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    color: #29264b;
+    background:
+        radial-gradient(circle at 10% 20%, #b9a8ff 0, transparent 30%),
+        radial-gradient(circle at 90% 80%, #8ddcf5 0, transparent 30%),
+        linear-gradient(135deg, #17153d, #373078, #5147a7);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Hiasan pola koordinat */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(#ffffff12 1px, transparent 1px),
+        linear-gradient(90deg, #ffffff12 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
+}
+
+header {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 45px 15px 25px;
+    color: white;
+}
+
+header h1 {
+    font-size: 38px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 15px #00000055;
+}
+
+header p {
+    color: #e2ddff;
+    font-size: 16px;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    width: 90%;
+    max-width: 700px;
+    margin: 25px auto 50px;
+    padding: 35px;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px #08062966;
+    border: 1px solid #ffffff80;
+}
+
+section {
+    text-align: center;
+}
+
+section h2 {
+    color: #5142bd;
+    margin-bottom: 18px;
+}
+
+section p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+button {
+    background: linear-gradient(135deg, #7565ed, #5142bd);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px #5142bd55;
+}
+
+button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.informasi {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    color: #5142bd;
+}
+
+.progress {
+    width: 100%;
+    height: 12px;
+    background: #e9e6ff;
+    border-radius: 20px;
+    margin-bottom: 28px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #8b7bff, #43c6e8);
+    border-radius: 20px;
+    transition: width 0.4s;
+}
+
+#pertanyaan {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+    color: #29264b;
+}
+
+#daftar-pilihan {
+    display: grid;
+    gap: 12px;
+}
+
+.pilihan {
+    width: 100%;
+    margin: 0;
+    background: #f1efff;
+    color: #29264b;
+    border: 2px solid #e2ddff;
+    text-align: left;
+}
+
+.pilihan:hover {
+    background: #e5e0ff;
+    border-color: #7565ed;
+}
+
+.pilihan.benar {
+    background: #dcfce7;
+    border: 2px solid #22a05a;
+    color: #166534;
+}
+
+.pilihan.salah {
+    background: #fee2e2;
+    border: 2px solid #dc4545;
+    color: #991b1b;
+}
+
+.pilihan:disabled {
+    opacity: 1;
+}
+
+#pembahasan {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    background: #f3f1ff;
+    border-left: 5px solid #7565ed;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+#hasil-skor {
+    font-size: 22px;
+    font-weight: bold;
+    color: #5142bd;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 22px;
+        margin-top: 20px;
+    }
+
+    #pertanyaan {
+        font-size: 17px;
+    }
+}
